@@ -65,31 +65,31 @@ python CPR.py --dataset amazonbook --lr 0.0001 --reg 0.001 --ks 20 --batch_size 
 #### LightGCN
 
 ```shell
-python CPR.py --dataset movielens_20m --lr 0.001 --reg 0.01 --ks 20 --batch_size 2048 --n_layer 3 --embed_type lightgcn --sample_rate 8 --sample_ratio 7 --eval_types valid test --eval_epoch 1 --early_stop 10 
+python CPR.py --dataset movielens_20m --lr 0.001 --reg 0.001 --ks 20 --batch_size 2048 --n_layer 3 --embed_type lightgcn --sample_rate 3 --sample_ratio 3 --eval_types valid test --eval_epoch 1 --early_stop 10 
 ```
 
 ```shell
-python CPR.py --dataset amazonbook --lr 0.001 --reg 0.0001 --ks 20 --batch_size 2048 --n_layer 3 --embed_type lightgcn --sample_rate 7 --sample_ratio 4 --eval_types valid test --eval_epoch 1 --early_stop 10 
+python CPR.py --dataset amazonbook --lr 0.001 --reg 0.001 --ks 20 --batch_size 2048 --n_layer 3 --embed_type lightgcn --sample_rate 3 --sample_ratio 4=3 --eval_types valid test --eval_epoch 1 --early_stop 10 
 ```
 
 #### NeuMF
 
 ```shell
-python CPR.py --dataset movielens_20m --lr 0.001 --reg 0.0001 --weight_reg 0.01 --weight_sizes 256 --ks 20 --batch_size 2048 --eval_batch_size 16 --n_layer 0 --embed_type lightgcn --inference_type mlp --sample_rate 1 --sample_ratio 4 --eval_types valid test --eval_epoch 10 --early_stop 5 
+python CPR.py --dataset movielens_20m --lr 0.0001 --reg 0.001 --weight_reg 0.01 --weight_sizes 256 --ks 20 --batch_size 2048  --n_layer 0 --embed_type lightgcn --sample_rate 3 --sample_ratio 3 --eval_types valid test --eval_epoch 1 --early_stop 10 
 ```
 
 ```shell
-python CPR.py --dataset amazonbook --lr 0.001 --reg 0.0001 --weight_reg 0.01 --weight_sizes 256 --ks 20 --batch_size 2048 --eval_batch_size 16 --n_layer 0 --embed_type lightgcn --inference_type mlp --sample_rate 1 --sample_ratio 6 --eval_types valid test --eval_epoch 10 --early_stop 5 
+python CPR.py --dataset amazonbook --lr 0.001 --reg 0.001 --weight_reg 0.01 --weight_sizes 256 --ks 20 --batch_size 2048 --n_layer 0 --embed_type lightgcn   --sample_rate 3 --sample_ratio 3 --eval_types valid test --eval_epoch 1 --early_stop 10 
 ```
 
 #### NGCF
 
 ```shell
-python CPR.py --dataset movielens_20m --lr 0.001 --reg 0.01 --weight_reg 0 --ks 20 --batch_size 2048 --n_layer 3 --embed_type ngcf --sample_rate 1.5 --sample_ratio 5 --eval_types valid test --eval_epoch 1 --early_stop 10 
+python CPR.py --dataset movielens_20m --lr 0.0001 --reg 0.001 --ks 20 --batch_size 2048 --n_layer 0 --embed_type ngcf --sample_rate 3 --sample_ratio 3 --eval_types valid test --eval_epoch 1 --early_stop 10 
 ```
 
 ```shell
-python CPR.py --dataset amazonbook --lr 0.0001 --reg 0.001 --weight_reg 0.01 --ks 20 --batch_size 2048 --n_layer 3 --embed_type ngcf --sample_rate 3 --sample_ratio 4 --eval_types valid test --eval_epoch 4 --early_stop 10 
+python CPR.py --dataset amazonbook --lr 0.0001 --reg 0.001 --weight_reg 0.001 --ks 20 --batch_size 2048 --n_layer 0 --embed_type ngcf --sample_rate 3 --sample_ratio 4 --eval_types valid test --eval_epoch 1 --early_stop 10 
 ```
 
 ### 由我们改进后的CPR
@@ -97,11 +97,11 @@ python CPR.py --dataset amazonbook --lr 0.0001 --reg 0.001 --weight_reg 0.01 --k
 以下命令可以复现我们对CPR进行创新性的改进后，以 LightGCN 为骨干，在2个数据集（MovieLens, AmazonBook）上的结果：
 
 ```shell
-python CPR.py --loss_type improved --dataset movielens_20m --lr 0.001 --reg 0.01 --ks 20 --batch_size 2048 --n_layer 3 --embed_type lightgcn --sample_rate 8 --sample_ratio 7 --eval_types valid test --eval_epoch 1 --early_stop 10
+python CPR.py --loss_type improved --dataset movielens_20m --lr 0.0001 --reg 0.001 --ks 20 --batch_size 2048 --n_layer 0 --embed_type lightgcn --sample_rate 3 --sample_ratio 3 --eval_types valid test --eval_epoch 1 --early_stop 10
 ```
 
 ```shell
-python CPR.py --loss_type improved --dataset amazonbook --lr 0.001 --reg 0.0001 --ks 20 --batch_size 2048 --n_layer 3 --embed_type lightgcn --sample_rate 7 --sample_ratio 4 --eval_types valid test --eval_epoch 1 --early_stop 10 --loss_type improved
+python CPR.py --loss_type improved --dataset amazonbook --lr 0.001 --reg 0.001 --ks 20 --batch_size 2048 --n_layer 0 --embed_type lightgcn --sample_rate 3 --sample_ratio 4 --eval_types valid test --eval_epoch 1 --early_stop 10
 ```
 
 ### Baselines
