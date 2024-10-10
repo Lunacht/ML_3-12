@@ -1,6 +1,6 @@
 # CPR & CPR_Improved
 
-原始代码项目为论文《Cross Pairwise Ranking for Unbiased Item Recommendation》的实现，链接为[CPR](https://github.com/Qcactus/CPR)，本项目是在原始代码的基础上拓展、改进而成的。
+原始代码项目为论文《Cross Pairwise Ranking for Unbiased Item Recommendation》的实现，链接为[CPR](https://github.com/Qcactus/CPR)，本项目是在原始代码的基础上做了一些改进（具体见pdf），使得模型具有更高的无偏性。
 
 <!-- ## Citation
 
